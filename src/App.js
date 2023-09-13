@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Land from './comp/land/Land';
 import './App.css';
+import Sidebar from './comp/Sidebar';
+import UpBar from './comp/Upbar';
+import { Timeline } from '@mui/icons-material';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import  'react-vertical-timeline-component/style.min.css';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import StarIcon from '@mui/icons-material/Star';
+import TimeLine from './comp/timeline/Timeline';
+import Timer from './comp/timer/timermain';
 
-function App() {
+
+const App = () => {
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-black' >
+      
+      <UpBar />
+      <Land />
+      
+      
     </div>
   );
-}
+};
 
 export default App;
